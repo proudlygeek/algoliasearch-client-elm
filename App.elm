@@ -56,7 +56,7 @@ subscriptions model =
 fetch : (Cmd Msg)
 fetch =
   let
-    client = Client "1LFL2RS6YM" "6f51e46323dc6a5d0f00c297ca8e0c26"
+    client = Client "1LFL2RS6YM" "426a1da4c6c0f96901c86d1380e327e7"
   in
     Task.perform FetchFail FetchSuccess (listIndexes client)
 
@@ -64,7 +64,7 @@ searchTeam : String -> (Cmd Msg)
 searchTeam value =
   let
     index = Index "team_members"
-    client = Client "1LFL2RS6YM" "6f51e46323dc6a5d0f00c297ca8e0c26"
+    client = Client "1LFL2RS6YM" "426a1da4c6c0f96901c86d1380e327e7"
   in
     Task.perform FetchFail SearchSuccess (search client index value)
 
